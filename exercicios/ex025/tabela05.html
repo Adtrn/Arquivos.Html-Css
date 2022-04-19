@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--O scope atributo define uma maneira de associar células de cabeçalho a células de dados em uma tabela. O scope atributo identifica se uma célula é um cabeçalho para uma coluna, linha ou grupo de colunas ou linhas.-->
+
+    <h1>Exercicio de tabelas</h1>
+    <table>
+        <!--tabela-->
+        <!--<caption>
+            legenda de tabela
+            Filmes Favoritos
+        </caption>-->
+        <thead>
+            <!--Agrupa o conteúdo do cabeçalho em uma tabela-->
+            <tr>
+                <!--linha em uma tabela-->
+                
+                <th>Area</th>
+                <!--célula de cabeçalho em uma tabela-->
+                <th>Diciplinas</th>
+                <th>Nota1</th>
+                <th>Nota2</th>
+                <th>Media</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Agrupa o conteúdo do corpo em uma tabela-->
+            <tr>
+                <th rowspan="4" scope="rowgroup">EXATAS</th>
+
+                <td>Ana maria dos santo</td>
+                <!--Define uma célula em uma tabela-->
+                <td>0</td>
+                <td>0</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <td>Beatriz souza</td>
+                <td>0</td>
+                <td>0</td>
+                <td>Batman</td>
+            </tr>
+            <tr>
+                <td>Claudia melo</td>
+                <td>0</td>
+                <td>0</td>
+                <td>Big hero</td>
+            
+            </tr>
+            <tr>
+                <td>Adriana</td>
+                <td>0</td>
+                <td>0</td>
+                <td>Big hero</td>
+            
+            </tr>
+            <tr>
+                <th>Media de Exatas</th>
+                <td colspan="4">1000</td>
+            <tr>
+
+                <th rowspan="3" scope="rowgroup">HUMANAS</th>
+                <td>Bruno Mendoça</td>
+                <!--Define uma célula em uma tabela-->
+                <td>0</td>
+                <td>0</td>
+                <td>Gladiadores</td>
+            </tr>
+            <tr>
+                <td>Daniel lourenço</td>
+                <td>0</td>
+                <td>0</td>
+                <td>Batman</td>
+            </tr>
+        </tbody>
+        <tr>
+            <th>Media de Humanas</th>
+            <td colspan="4">1000</td>
+        <tr>
+    </table>
+</body>
+
+</html>

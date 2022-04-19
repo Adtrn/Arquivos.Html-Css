@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mesclagem de celulas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+            width: 300px;
+        }
+        td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclagem de celulas</h1>
+    <table><!--células de tabela-->
+        <tr><!--significa linha da tabela-->
+            <td>A</td><!--significa dados da tabela-->
+            <td colspan="2">B</td><!--1 das espanções em forma de coluna e espanção em forma de linha COLSPAN = Fundirá a célula em questão com sua vizinha direita / ROWSNPAN = Esta célula fundira a célula de abaixo  -->
+            
+        </tr>
+
+        <tr>
+            <td rowspan="3">D</td>
+            <td>E</td>
+            <td rowspan="2">F</td>
+        </tr>
+
+        <tr>
+            
+            <td>H</td>
+           
+        </tr>
+
+        <tr>
+            
+           
+            <td colspan="2">M</td>
+        </tr>
+    </table>
+</body>
+</html>

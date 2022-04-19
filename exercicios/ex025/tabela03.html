@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFEITO ZEBRADO</title>
+    <style>
+        /*estilo interno*/
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead,
+        tfoot {
+            background-color: gray;
+            color: white;
+        }
+        thead > tr > th{/*config o cabeçalho para rolagem */
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+        tbody > tr:nth-child(2n){/*Pseudo classe 2n = odd ou even = impar ou par*/
+            background-color: rgb(184, 24, 24);
+            font-weight: bold;
+        }
+        tr:hover {background-color: #D6EEEE;}
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>uso de tabelas grandes</h1>
+    <!--
+        As tabelas HTML podem ter tamanhos diferentes para cada coluna, linha ou toda a tabela.
+
+        Anatomia para tabelas grandes 
+        TABLE
+            THEAD = CABEÇA
+                TR, TD, TH
+            TBODY = CORPO
+                 TR, TD, TH
+            TFOOT = RODAPE
+                 TR, TD, TH
+
+                 Hierarquia de tabelas (simples)
+                        table=tabela
+                        table header=cabeçalho de tabela
+                        table data=dado de tabela
+                        <table> Define uma tabela
+                            
+                        <th> Define uma célula de cabeçalho em uma tabela
+                        <tr> Define uma linha em uma tabela
+                        <td> Define uma célula em uma tabela
+                        <caption> Define uma legenda de tabela
+
+                        <colgroup> Especifica um grupo de uma ou mais colunas em uma tabela para formatação
+                        <col> Especifica as propriedades da coluna para cada coluna dentro de um elemento <colgroup>
+                        Se você quiser estilizar as duas primeiras colunas de uma tabela, use os elementos <colgroup> e <col>
+                        Cada grupo é especificado com um <col>elemento.
+                        O spanatributo especifica quantas colunas obtém o estilo.
+                        O styleatributo especifica o estilo para fornecer as colunas
+
+                             <colgroup>
+                                <col span="2" style="background-color: #D6EEEE">
+                                <col span="3" style="background-color: pink">
+                            </colgroup>
+
+                        <thead> Agrupa o conteúdo do cabeçalho em uma tabela
+                        <tbody> Agrupa o conteúdo do corpo em uma tabela
+                        <tfoot> Agrupa o conteúdo do rodapé em uma tabela
+
+        propriedade colspan-Rowspan
+            Para fazer uma célula se estender por várias colunas
+            <th colspan="2">Name</th>
+
+            Para fazer uma célula se estender por várias linhas
+            <th rowspan="2">Phone</th>
+    -->
+    <table>
+        <caption>Estatisticas populacional</caption>
+        <!--legenda-->
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São paula</td>
+                <td class="num">60 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">49 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">20 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Parana</td>
+                <td class="num">30 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Mato Groso</td>
+                <td class="num">38 919 049</td>
+            </tr>
+
+            <tr>
+                <td>São paula</td>
+                <td class="num">60 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">49 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">20 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Parana</td>
+                <td class="num">30 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Mato Groso</td>
+                <td class="num">38 919 049</td>
+            </tr>
+
+            <tr>
+                <td>São paula</td>
+                <td class="num">60 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">49 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">20 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Parana</td>
+                <td class="num">30 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Mato Groso</td>
+                <td class="num">38 919 049</td>
+            </tr>
+
+            <tr>
+                <td>São paula</td>
+                <td class="num">60 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">49 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">20 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Parana</td>
+                <td class="num">30 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Mato Groso</td>
+                <td class="num">38 919 049</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total de Habitantes</th>
+                <td class="num"><strong>213.00</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit voluptatibus, esse blanditiis ullam asperiores eligendi odio cum nesciunt voluptas? Temporibus expedita beatae ipsam. Hic labore quas quasi culpa, ad pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem quisquam impedit excepturi, totam accusamus id. Dolores voluptatum dolor atque beatae, optio distinctio magnam culpa possimus autem reprehenderit nam libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis magnam dolores id non sed molestias modi? Vero maxime illum vitae cum error fuga quae, perferendis sequi velit animi assumenda obcaecati!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, delectus. Harum illo veniam, consequatur omnis vitae libero odio ad fugiat, perferendis quae porro et consectetur? Dolores et praesentium commodi esse?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed eos beatae fuga minus eaque, quia qui est maiores in obcaecati assumenda. Suscipit pariatur nihil, assumenda ipsum eius quaerat Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit consequatur perspiciatis nemo alias. Iusto voluptatem eligendi commodi optio pariatur id dolores, maiores ipsum qui assumenda quasi vitae sequi rerum sint!</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit voluptatibus, esse blanditiis ullam asperiores eligendi odio cum nesciunt voluptas? Temporibus expedita beatae ipsam. Hic labore quas quasi culpa, ad pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem quisquam impedit excepturi, totam accusamus id. Dolores voluptatum dolor atque beatae, optio distinctio magnam culpa possimus autem reprehenderit nam libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis magnam dolores id non sed molestias modi? Vero maxime illum vitae cum error fuga quae, perferendis sequi velit animi assumenda obcaecati!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, delectus. Harum illo veniam, consequatur omnis vitae libero odio ad fugiat, perferendis quae porro et consectetur? Dolores et praesentium commodi esse?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed eos beatae fuga minus eaque, quia qui est maiores in obcaecati assumenda. Suscipit pariatur nihil, assumenda ipsum eius quaerat Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit consequatur perspiciatis nemo alias. Iusto voluptatem eligendi commodi optio pariatur id dolores, maiores ipsum qui assumenda quasi vitae sequi rerum sint!</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit voluptatibus, esse blanditiis ullam asperiores eligendi odio cum nesciunt voluptas? Temporibus expedita beatae ipsam. Hic labore quas quasi culpa, ad pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem quisquam impedit excepturi, totam accusamus id. Dolores voluptatum dolor atque beatae, optio distinctio magnam culpa possimus autem reprehenderit nam libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis magnam dolores id non sed molestias modi? Vero maxime illum vitae cum error fuga quae, perferendis sequi velit animi assumenda obcaecati!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, delectus. Harum illo veniam, consequatur omnis vitae libero odio ad fugiat, perferendis quae porro et consectetur? Dolores et praesentium commodi esse?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed eos beatae fuga minus eaque, quia qui est maiores in obcaecati assumenda. Suscipit pariatur nihil, assumenda ipsum eius quaerat Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit consequatur perspiciatis nemo alias. Iusto voluptatem eligendi commodi optio pariatur id dolores, maiores ipsum qui assumenda quasi vitae sequi rerum sint!</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit voluptatibus, esse blanditiis ullam asperiores eligendi odio cum nesciunt voluptas? Temporibus expedita beatae ipsam. Hic labore quas quasi culpa, ad pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem quisquam impedit excepturi, totam accusamus id. Dolores voluptatum dolor atque beatae, optio distinctio magnam culpa possimus autem reprehenderit nam libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis magnam dolores id non sed molestias modi? Vero maxime illum vitae cum error fuga quae, perferendis sequi velit animi assumenda obcaecati!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, delectus. Harum illo veniam, consequatur omnis vitae libero odio ad fugiat, perferendis quae porro et consectetur? Dolores et praesentium commodi esse?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed eos beatae fuga minus eaque, quia qui est maiores in obcaecati assumenda. Suscipit pariatur nihil, assumenda ipsum eius quaerat Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit consequatur perspiciatis nemo alias. Iusto voluptatem eligendi commodi optio pariatur id dolores, maiores ipsum qui assumenda quasi vitae sequi rerum sint!</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit voluptatibus, esse blanditiis ullam asperiores eligendi odio cum nesciunt voluptas? Temporibus expedita beatae ipsam. Hic labore quas quasi culpa, ad pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem quisquam impedit excepturi, totam accusamus id. Dolores voluptatum dolor atque beatae, optio distinctio magnam culpa possimus autem reprehenderit nam libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis magnam dolores id non sed molestias modi? Vero maxime illum vitae cum error fuga quae, perferendis sequi velit animi assumenda obcaecati!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, delectus. Harum illo veniam, consequatur omnis vitae libero odio ad fugiat, perferendis quae porro et consectetur? Dolores et praesentium commodi esse?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed eos beatae fuga minus eaque, quia qui est maiores in obcaecati assumenda. Suscipit pariatur nihil, assumenda ipsum eius quaerat Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit consequatur perspiciatis nemo alias. Iusto voluptatem eligendi commodi optio pariatur id dolores, maiores ipsum qui assumenda quasi vitae sequi rerum sint!</p>
+
+    
+</body>
+
+</html>

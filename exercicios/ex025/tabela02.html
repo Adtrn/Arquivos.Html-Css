@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uso de tabelas grandes</title>
+    <style>/*estilo interno*/
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+        thead,tfoot{
+            background-color: gray;
+            color: white;
+        }
+        td.num{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>uso de tabelas grandes</h1>
+    <!--
+        As tabelas HTML podem ter tamanhos diferentes para cada coluna, linha ou toda a tabela.
+
+        Anatomia para tabelas grandes 
+        TABLE
+            THEAD = CABEÇA
+                TR, TD, TH
+            TBODY = CORPO
+                 TR, TD, TH
+            TFOOT = RODAPE
+                 TR, TD, TH
+
+                 Hierarquia de tabelas (simples)
+                        table=tabela
+                        table header=cabeçalho de tabela
+                        table data=dado de tabela
+                        <table> Define uma tabela
+                            
+                        <th> Define uma célula de cabeçalho em uma tabela
+                        <tr> Define uma linha em uma tabela
+                        <td> Define uma célula em uma tabela
+                        <caption> Define uma legenda de tabela
+
+                        <colgroup> Especifica um grupo de uma ou mais colunas em uma tabela para formatação
+                        <col> Especifica as propriedades da coluna para cada coluna dentro de um elemento <colgroup>
+                        Se você quiser estilizar as duas primeiras colunas de uma tabela, use os elementos <colgroup> e <col>
+                        Cada grupo é especificado com um <col>elemento.
+                        O spanatributo especifica quantas colunas obtém o estilo.
+                        O styleatributo especifica o estilo para fornecer as colunas
+
+                             <colgroup>
+                                <col span="2" style="background-color: #D6EEEE">
+                                <col span="3" style="background-color: pink">
+                            </colgroup>
+
+                        <thead> Agrupa o conteúdo do cabeçalho em uma tabela
+                        <tbody> Agrupa o conteúdo do corpo em uma tabela
+                        <tfoot> Agrupa o conteúdo do rodapé em uma tabela
+
+        propriedade colspan-Rowspan
+            Para fazer uma célula se estender por várias colunas
+            <th colspan="2">Name</th>
+
+            Para fazer uma célula se estender por várias linhas
+            <th rowspan="2">Phone</th>
+    -->
+    <table>
+        <caption>Estatisticas populacional</caption><!--legenda-->
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São paula</td>
+                <td class="num">60 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">49 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">20 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Parana</td>
+                <td class="num">30 919 049</td>
+            </tr>
+
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total de Habitantes</th>
+                <td class="num"><strong>159.00</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

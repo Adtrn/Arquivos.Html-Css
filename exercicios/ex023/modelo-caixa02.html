@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{/*box-level*/
+            /*display:inline;*//*ocupa a linha do bloco*/
+            background-color: lightblue;
+            height: 300px;
+            width: 300px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkgray;
+/*Margin da borda para fora PADDING da borda pra dentro*/
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            /*margin:auto; para centralizar */
+
+            /*trasejado dentro da margin */
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: chartreuse;
+            /*shorthands usado para simplificar propriedades como border margin padding */
+            border: 10px solid darkgray;
+            padding: 10px 10px 10px 10px;/*da esquerda para a esquerda anti horario*/
+            margin: 20px 20px 40px 20px;/*auto para centralizar*/
+            outline: 5px dashed salmon;
+
+
+        }
+        a{/*inline-level*/
+            /*display:block;*//*bloco ocupa a largura toda do site*/
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>paragrafos tambem são exemplos de box-level mas os <a href="#">links são exp de inline-level</a></p>
+</body>
+</html>
