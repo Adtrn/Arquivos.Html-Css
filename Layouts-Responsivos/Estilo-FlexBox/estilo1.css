@@ -1,0 +1,95 @@
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;/*Altera o modelo de caixa */
+}
+/**********************************/
+/* 0. Variáveis
+/* 1. Container
+/* 2. Menu
+/* 3. Header
+/* 4. Quem somos
+/* 5. Nossos cursos
+/* 6. Planos
+/* 7. Vantagens
+/* 8. Newsletter
+/* 9. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+:root{/*Pseudo-classe cria os proprios variaveis e elementos*/
+    --ff-primary:"Nunito", Helvetica,Arial,Sans-serif;
+    --clr-green-dark: #049A40;
+    --clr-green-light: #0BF96A;
+    --clr-pink-dark: #E10BF9;
+    --clr-pink-light: #F3A0FD;
+    --clr-white: #F5F5F5;
+}
+
+/**********************************/
+/* 1. Estilos gerais
+body{
+/**********************************/
+bady{
+    background-color:var(--clr-white);
+    font-family: var(--ff-primary);
+}
+a,/*Alteração de estados de todos os links*/
+a:hover,/*sobre o mouse*/
+a:active,/*quando clicado*/
+a:link,/*nunca foi clicado*/
+a:visited{/*já foi visitado*/
+    text-decoration: none;
+    color: black;/*estado de a: sempre black*/
+}
+li{
+    list-style-type: none;
+}
+
+/**********************************/
+/* 2. Menu
+/**********************************/
+.menu-bg{
+    background-color: var(--clr-green-light);
+}
+.menu{
+    display: flex;/** organizar elementos dentro de contêiners de forma flexível **/
+    align-items: center;/*centraliza elementos da Div menu*/
+    justify-content: space-between;/*separa os elementos*/
+    max-width: 960px;/*Tmho total area do menu*/
+    margin: 0 auto;
+}
+
+/**********************************/
+/* 3. Header
+/**********************************/
+
+/**********************************/
+/* 4. Quem somos
+/**********************************/
+
+/**********************************/
+/* 5. Nossos cursos
+/**********************************/
+
+/**********************************/
+/* 6. Planos
+/**********************************/
+
+/**********************************/
+/* 7. Vantagens
+/**********************************/
+
+/**********************************/
+/* 8. Newsletter
+/**********************************/
+
+/**********************************/
+/* 9. Footer
+/**********************************/
