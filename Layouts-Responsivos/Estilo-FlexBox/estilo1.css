@@ -48,10 +48,33 @@ a:visited{/*já foi visitado*/
     text-decoration: none;
     color: black;/*estado de a: sempre black*/
 }
+
 li{
     list-style-type: none;
 }
-
+hr{
+    border: none;
+    background-color: var(--clr-pink-dark);
+    height: 2px;
+    width: 140px;
+    margin: 20px auto;
+}
+p{
+    line-height: 21.82px;
+    padding: 0 10px;
+}
+.section__titulo{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+body{
+    margin: 0;
+}
 /**********************************/
 /* 2. Menu
 /**********************************/
@@ -64,23 +87,158 @@ li{
     justify-content: space-between;/*separa os elementos*/
     max-width: 960px;/*Tmho total area do menu*/
     margin: 0 auto;
+    flex-wrap: wrap;/*quebra do menu em varias linhas*/
+}
+.menu__logo{
+    margin: 10px;
+}
+.nav__list{
+    display: flex;/*organiza o nav em linhas*/
+    flex-wrap: wrap;/*quebra do menu em varias linhas*/
+}
+.nav__link{
+    padding: 20px 10px;/*20 infe e super 10 esquerda e direi */
+
 }
 
 /**********************************/
 /* 3. Header
 /**********************************/
-
+.intro{
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 25px 0;
+}
 /**********************************/
 /* 4. Quem somos
 /**********************************/
-
+.somos{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.somos-c{/*Faz o texto ocpar uma area maior do que a da imagem*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;/*especifica o alinhamento padrão para itens dentro do contêiner flexível .somos-c*/
+}
+.somos-c__texto{
+    flex: 6 1 160px;/*flex-grow flex-shrink flex-basis*/
+}
+.somos-c__img{
+    flex: 1 1 350px;/*1=coluna espaço que deve ocupar 1= proporção que deve encolher 350px tamanho da img */
+}
 /**********************************/
 /* 5. Nossos cursos
 /**********************************/
+.cursos{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.cursos-c{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.curso{
+    width: 280px;
+    margin: 0 20px;
+}
+.curso__titulo{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 0 5px 0;
+}
 
 /**********************************/
 /* 6. Planos
 /**********************************/
+.planos{
+    background-color: var(--clr-pink-light);
+}
+.planos-c{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.plano{
+    width: 290px;
+    margin: 10px;
+    border: 2px solid var(--clr-green-light);
+}
+.plano__titulo{
+    font-size: 3rem;/*1rem = 16px* 3 x 16px = 48px*/
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto;
+
+}
+.plano__preco{
+    font: 3rem;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.plano__preco{
+    position: relative;
+    font-size: 1.5rem;
+    top: -15px;
+}
+.plano__divisor{
+    background-color: var(--clr-green-light);
+    width: 99%;
+    margin: 5px;
+}
+.plano-lista{
+    max-width: 195px;
+    margin: 0 auto;
+}
+.plano-lista__item{
+    margin: 10px 0;
+    font-size: italic;
+    display: flex;
+    align-items: center;
+}
+.plano-lista__item::before{/*elemento aparece antes do conteudo da lista */
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: var(--clr-green-light);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.plano__btn-comprar{
+    display: block;
+    max-width: 180px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px auto;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid var(--clr-green-light);
+}
+.plano:last-child{
+    background-color: var(--clr-green-light);
+}
+.plano:last-child, .plano:last-child .plano__btn-comprar{
+    border: 1px solid var(--clr-pink-dark);
+}
+.plano:last-child .plano-lista__item::before, .plano:last-child .plano__divisor{
+    background-color: var(--clr-pink-dark);
+}
+@media (max-width: 800px){
+    .plano:nth-child(3){
+        order: -2;
+    }
+    .plano:nth-child(2){
+        order: -1;
+    }
+}
 
 /**********************************/
 /* 7. Vantagens
